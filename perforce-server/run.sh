@@ -43,4 +43,4 @@ fi
 
 # Pipe server log and wait until the server dies
 PID_FILE=/var/run/p4d.$SERVER_NAME.pid
-exec /usr/bin/tail --pid=$(cat $PID_FILE) -n 0 -f "$SERVER_ROOT/log"
+exec /usr/bin/tail --pid=$(cat $PID_FILE) -n 0 -f "$SERVER_ROOT/logs/log"
