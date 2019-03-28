@@ -1,5 +1,5 @@
 FROM noonien/perforce-base
-MAINTAINER George Jiglau <george@mux.ro>
+LABEL maintainer="George Jiglau <george@mux.ro>"
 
 # Install the perforce server
 RUN apt-get install -y perforce-server curl
