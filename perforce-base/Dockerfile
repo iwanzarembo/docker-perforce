@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-LABEL maintainer="George Jiglau <george@mux.ro>"
+MAINTAINER George Jiglau <george@mux.ro>
 
 ENV DEBIAN_FRONTEND noninteractive
 

@@ -1,5 +1,5 @@
 FROM noonien/perforce-base
-LABEL maintainer="George Jiglau <george@mux.ro>"
+MAINTAINER George Jiglau <george@mux.ro>
 
 RUN apt-get install -y perforce-cli default-jre-headless
 

@@ -1,11 +1,8 @@
 FROM noonien/perforce-base
-LABEL maintainer="George Jiglau <george@mux.ro>"
+MAINTAINER George Jiglau <george@mux.ro>
 
 # Install the perforce server
-RUN apt-get update && apt-get install -y helix-p4d curl && \
-    # clean temporary files
-    rm -rf /var/log/* && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y perforce-server curl
 
 # Volumes for server roots and triggers
 VOLUME /opt/perforce/servers
