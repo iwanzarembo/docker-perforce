@@ -1,26 +1,40 @@
-docker-perforce
-===============
-[![License: MIT](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+= Docker Perforce SErver
 
-This is a collection of docker images to run products provided by [Perforce](http://www.perforce.com/).
+link:LICENSE[image:http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square[License:
+MIT]]
 
-Usage
------
+This is a collection of docker images to run products provided by
+http://www.perforce.com/[Perforce].
 
-    docker run -e SERVER_NAME=server-name -e P4PASSWD=<password> noonien/perforce-server
+The perforce server version in this image is *2018.2-1751184~bionic*.
 
-Details
--------
-The following environment variables are available:
+=== Usage
 
-  - SERVER_NAME - Server name. Required.
-  - P4PORT - Address on which to listen. Described [here](http://www.perforce.com/perforce/doc.current/manuals/cmdref/P4PORT.html). Defaults to ssl:1666.
-  - P4USER - Superuser username. Only created when creating a new server. Defaults to perforce.
-  - P4PASSWD - Superuser password. Required when creating a new server.
+....
+docker run -e SERVER_NAME=server-name -e P4PASSWD=<password> \
+           docker.wdf.sap.corp:65160/mdm/helpers/perforce-server
+....
 
-The path `/opt/perforce/server` is mounted as a volume because that's where the server roots are stored.
+=== Supported Environment variables
 
-Contributing
-------------
-Contributing is always welcome and appreciated! Pull requests and issues will
-be processed as fast as possible!
+[cols="1,4"]
+|===
+| SERVER_NAME
+| Server name. Required.
+
+| P4PORT
+| Address on which to listen. Described
+http://www.perforce.com/perforce/doc.current/manuals/cmdref/P4PORT.html[here].
+Defaults to ssl:1666.
+
+| P4USER
+| Superuser username. Only created when creating a new server.
+Defaults to perforce.
+
+| P4PASSWD
+| Superuser password. Required when creating a new server.
+|===
+
+
+The path `/opt/perforce/server` is mounted as a volume because that’s
+where the server roots are stored.
